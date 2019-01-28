@@ -1,0 +1,28 @@
+{
+  "name": "apprenderlandingpage",
+  "version": "1.0.0",
+  "description": "Pagina de presentación para proyecto movil apprender",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabloTP87/ApprenderLandingPage.git"
+  },
+  "author": "Pablo Tomey",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/pabloTP87/ApprenderLandingPage/issues"
+  },
+  "homepage": "https://github.com/pabloTP87/ApprenderLandingPage#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
