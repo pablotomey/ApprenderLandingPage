@@ -14,28 +14,32 @@
             font-size: 20px
             line-height: 150%
 
-        
-        
-
 .main-nav
     display: flex
     margin-top: 10px
     li
         list-style: none
+
     li:first-child
         margin-right: auto
-    
-    
-    
+   
     a
         color: white
         display: block
         text-decoration: none
-        border-radius: 8px
+        border-radius: 20px
         padding: 10px 20px
+        transition: all 0.2s ease
+    a:hover, a:active
+        color: $accent-color
 
 a.contact-button
     background: $accent-color
+    transition: all 0.2s ease
     box-shadow: 0 12px 10px -5px rgba(0,0,0, 0.5)
-
+a.contact-button:hover
+    outline: 0
+    background: $secondary-color
+    transform: translateY(3px)
+    color: white
 

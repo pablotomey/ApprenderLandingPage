@@ -27,9 +27,9 @@ textarea
     border-radius: 7px
     border: 1px solid #B1B1B1
     padding: 5px
-    transition: border .1s ease-in
+    transition: border 0.2s ease
 textarea:focus
-    border: 2px solid $secondary-color
+    border: 1px solid $secondary-color
 
 button
     width: 224px
@@ -39,5 +39,13 @@ button
     background: $accent-color
     border-radius: 20px
     border: none
+    margin: 0 auto
+    transition: all 0.2s ease
+    box-shadow: 0 20px 12px -15px rgba(0,0,0,0.5)
+
+button:hover
+    outline: 0
+    transform: translateY(3px)
+    background: $secondary-color
     
     
