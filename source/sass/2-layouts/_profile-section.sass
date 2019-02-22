@@ -5,12 +5,23 @@
     padding: 120px
     line-height: 50%
 
+    @media only screen and (max-width: 625px)
+        padding: 80px
+
 .profile-block
     display: grid
     grid-template-columns: repeat(3, auto)
 
-    @media only screen and (max-width: 625px)
+    @media only screen and (max-width: 900px)
         grid-template-columns: repeat(1, auto)
+    
+    div
+        margin: 0 auto
+        @media only screen and (max-width: 625px)
+            padding: 20px
+        
+        p
+            line-height: 18px
 
 
 .radius-img
