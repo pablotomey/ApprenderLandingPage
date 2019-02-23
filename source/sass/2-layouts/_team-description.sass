@@ -1,5 +1,5 @@
 #team-description
-    background: url("../img/team_bakground.jpg") no-repeat
+    background: url("../img/team_background.jpg") no-repeat
     background-size: cover
     color: white
     text-align: center
@@ -7,16 +7,19 @@
     padding: 65px
     margin-top: 80px
 
-    @media only screen and (max-width: 625px)
-        padding: 42px
-        height: 286px
+    @media only screen and (max-width: 770px)
+        background: url("../img/team_background_small.jpg") no-repeat
         background-position: center
+        margin-top: 50px
+    
+    @media only screen and (max-width: 400px)
+        padding: 65px 25px
 
     h1
         text-transform: uppercase
         font-size: 40px
 
-        @media only screen and (max-width: 625px)
+        @media only screen and (max-width: 600px)
             font-size: 30px
     
     p
@@ -26,5 +29,5 @@
         font-size: 21px
         line-height: 160%
 
-        @media only screen and (max-width: 625px)
+        @media only screen and (max-width: 600px)
             font-size: 18px
