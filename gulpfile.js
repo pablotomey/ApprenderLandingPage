@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minify = require('gulp-minify-css');
     img = require('gulp-imagemin');
     uglify = require('gulp-uglify');
+    concat = require('gulp-concat');
     browserSync = require('browser-sync').create();
 
 // Sincronizacion entre la carpeta principal de compilación y el navegador
@@ -50,6 +51,15 @@ function scripts(cb){
     cb();
 }
 
+// Concatenar archivos o librerias JS
+function vendors(cb){
+    gulp.src('source/js/vendors/*.js')   
+    .pipe(concat('vendors.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js/vendors/'));
+    cb();
+}
+
 // Compresor de imagenes
 function images(cb){
     gulp.src('source/img/*')
@@ -61,12 +71,14 @@ function images(cb){
 function watch(){
     gulp.watch('source/sass/**/*.sass', gulp.series(style, reload))
     gulp.watch('source/js/*.js', gulp.series(scripts, reload))
+    gulp.watch('source/js/vendors/*.js', gulp.series(vendors, reload))
     gulp.watch('build/*.html', reload);
 };
 
 gulp.task('style', style);
 gulp.task('images', images);
 gulp.task('scripts', scripts);
+gulp.task('vendors', vendors);
 gulp.task('watch', gulp.parallel(browser_sync, watch));
 
 
