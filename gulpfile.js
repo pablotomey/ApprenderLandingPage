@@ -7,9 +7,10 @@ var gulp = require('gulp'),
     rename = require('gulp-rename');
     minify = require('gulp-minify-css');
     img = require('gulp-imagemin');
+    uglify = require('gulp-uglify');
     browserSync = require('browser-sync').create();
 
-// Sincronizacion entre la carpeta principal y el navegador
+// Sincronizacion entre la carpeta principal de compilación y el navegador
 function browser_sync(){
     browserSync.init({
 
@@ -41,6 +42,14 @@ function style(cb){
     cb();
 };
 
+// Minificar archivos JS
+function scripts(cb){
+    gulp.src('source/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js/'));
+    cb();
+}
+
 // Compresor de imagenes
 function images(cb){
     gulp.src('source/img/*')
@@ -51,11 +60,13 @@ function images(cb){
 
 function watch(){
     gulp.watch('source/sass/**/*.sass', gulp.series(style, reload))
+    gulp.watch('source/js/*.js', gulp.series(scripts, reload))
     gulp.watch('build/*.html', reload);
 };
 
 gulp.task('style', style);
 gulp.task('images', images);
+gulp.task('scripts', scripts);
 gulp.task('watch', gulp.parallel(browser_sync, watch));
 
 

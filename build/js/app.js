@@ -1,0 +1,1 @@
+function showNav(){console.log("Menu responsivo desplegado");var e=document.getElementById("responsive-nav");"responsive-nav"===e.className?e.className+=" show-nav":e.className="responsive-nav"}
