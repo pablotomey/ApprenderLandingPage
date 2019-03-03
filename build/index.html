@@ -173,18 +173,18 @@
             <form class="form-contact" action="" method="">
                 <div class="input-block">
                     <label for="nombre">Nombre</label>
-                    <input type="text" pattern="^[a-zA-Z ]*" id="nombre" placeholder="Nombre y apellido" required>
+                    <input type="text" name="nombre" pattern="^[a-zA-Z ]*" id="nombre" placeholder="Nombre y apellido" required>
                 </div>
                 <div class="input-block">
                     <label for="email">Correo electronico</label>
-                    <input type="email" id="email" placeholder="ejemplo@email.com" required>
+                    <input type="email" name="email" id="email" placeholder="ejemplo@email.com" required>
                 </div>
                 <div class="input-block">
                     <label for="celular">Celular</label>
-                    <input type="text" pattern="^[0-9]*$" id="celular" placeholder="912345678" maxlength="9" minlength="9" required>
+                    <input type="text" name="celular" pattern="^[0-9]*$" id="celular" placeholder="912345678" maxlength="9" minlength="9" required>
                 </div>
                 <div class="input-block">
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje..." required></textarea>
+                    <textarea name="mensaje" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje..." required></textarea>
                 </div>
                 <div class="input-block">
                     <button type="submit">Enviar</button>
