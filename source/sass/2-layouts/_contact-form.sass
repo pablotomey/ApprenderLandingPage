@@ -23,8 +23,8 @@ input
     padding: 5px
     transition: border .1s ease-in
 
-input:focus 
-    border: 2px solid $secondary-color
+input:valid
+    border: 2px solid green
 
 label
     float: left
@@ -33,9 +33,9 @@ textarea
     border-radius: 7px
     border: 1px solid #B1B1B1
     padding: 5px
-    transition: border 0.2s ease
-textarea:focus
-    border: 1px solid $secondary-color
+
+textarea:valid
+    border: 2px solid green
 
 button
     width: 180px
