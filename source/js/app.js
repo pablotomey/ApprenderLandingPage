@@ -35,7 +35,7 @@ ScrollReveal().reveal('.right-anim-interface', {
 });
 
 ScrollReveal().reveal('.bottom-anim-team', {
-    delay: 800,
+    delay: 600,
     duration: 800,
     origin: 'bottom',
     distance: '100px'
@@ -54,3 +54,5 @@ ScrollReveal().reveal('.bottom-anim-profile', {
     origin: 'bottom',
     distance: '100px'
 });
+
+// Peticion ajax para formulario de contacto...
