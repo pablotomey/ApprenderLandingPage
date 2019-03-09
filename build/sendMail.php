@@ -15,8 +15,8 @@
     // Concatenamos el mensaje con todos los datos en una sola variable
     $body = "Enviado por: " . $nombre ."<br>".
             "Correo: " . $email ."<br>".
-            "Celular: " . $celular ."<br>".
-            "Mensaje: " . $mensaje;
+            "Celular: " . $celular ."<br> <br>".
+            "<p>".$mensaje."</p>";
 
 
     $mail = new PHPMailer(true);                          // Passing `true` enables exceptions
