@@ -67,7 +67,7 @@ function submitForm(){
     datos.append('mensaje', document.getElementById('mensaje').value);
     
     var ajax = new XMLHttpRequest();
-    ajax.open('POST','../sendMail.php',true);
+    ajax.open('POST','sendMail.php',true);
 
     ajax.onreadystatechange = function(){
         
