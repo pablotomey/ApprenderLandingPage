@@ -61,13 +61,13 @@ function submitForm(){
 
     var datos = new FormData();
 
-    datos.append(document.getElementById('nombre').value);
-    datos.append(document.getElementById('email').value);
-    datos.append(document.getElementById('celular').value);
-    datos.append(document.getElementById('mensaje').value);
+    datos.append('nombre', document.getElementById('nombre').value);
+    datos.append('email', document.getElementById('email').value);
+    datos.append('celular', document.getElementById('celular').value);
+    datos.append('mensaje', document.getElementById('mensaje').value);
     
     var ajax = new XMLHttpRequest();
-    ajax.open('POST',sendMail.php,true);
+    ajax.open('POST','../sendMail.php',true);
 
     ajax.onreadystatechange = function(){
         
