@@ -59,6 +59,9 @@ ScrollReveal().reveal('.bottom-anim-profile', {
 
 function submitForm(){
 
+    var userMessage = document.getElementById('user-message');
+    var buttonMessage = document.getElementById('button-message');
+
     var datos = new FormData();
 
     datos.append('nombre', document.getElementById('nombre').value);
@@ -72,18 +75,17 @@ function submitForm(){
     ajax.onreadystatechange = function(){
         
         if(ajax.readyState == 4 && ajax.status == 200){
+            buttonMessage.innerHTML = "Enviando..";
             if(ajax.responseText === 'enviado'){
 
-                var mensaje = document.getElementById('message');
-                document.getElementById('user-message').innerHTML = "Gracias por contactarnos!!";
-                mensaje.style.display = "block";
+                userMessage.style.display = "block";
+                userMessage.innerHTML = "Gracias por contactarnos!!";
+                buttonMessage.innerHTML = "Enviado !";
 
             }else{
 
-                var mensaje = document.getElementById('message');
-                document.getElementById('user-message').innerHTML = "Error intentalo de nuevo!!";
-                mensaje.className += " invalid";
-                mensaje.style.display = "block";
+                userMessage.innerHTML = "Error intentalo de nuevo!!";
+
             }
         }
     }
