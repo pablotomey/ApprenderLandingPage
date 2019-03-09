@@ -56,3 +56,37 @@ ScrollReveal().reveal('.bottom-anim-profile', {
 });
 
 // Peticion ajax para formulario de contacto...
+
+function submitForm(){
+
+    var datos = new FormData();
+
+    datos.append(document.getElementById('nombre').value);
+    datos.append(document.getElementById('email').value);
+    datos.append(document.getElementById('celular').value);
+    datos.append(document.getElementById('mensaje').value);
+    
+    var ajax = new XMLHttpRequest();
+    ajax.open('POST',sendMail.php,true);
+
+    ajax.onreadystatechange = function(){
+        
+        if(ajax.readyState == 4 && ajax.status == 200){
+            if(ajax.responseText === 'enviado'){
+
+                var mensaje = document.getElementById('message');
+                document.getElementById('user-message').innerHTML = "Gracias por contactarnos!!";
+                mensaje.style.display = "block";
+
+            }else{
+
+                var mensaje = document.getElementById('message');
+                document.getElementById('user-message').innerHTML = "Error intentalo de nuevo!!";
+                mensaje.className += " invalid";
+                mensaje.style.display = "block";
+            }
+        }
+    }
+
+    ajax.send(datos);
+}
