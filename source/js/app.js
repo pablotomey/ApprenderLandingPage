@@ -62,6 +62,8 @@ function submitForm(){
     var userMessage = document.getElementById('user-message');
     var buttonMessage = document.getElementById('button-message');
 
+    buttonMessage.innerHTML = "Enviando..";
+    
     var datos = new FormData();
 
     datos.append('nombre', document.getElementById('nombre').value);
@@ -75,7 +77,7 @@ function submitForm(){
     ajax.onreadystatechange = function(){
         
         if(ajax.readyState == 4 && ajax.status == 200){
-            buttonMessage.innerHTML = "Enviando..";
+            
             if(ajax.responseText === 'enviado'){
 
                 userMessage.style.display = "block";
