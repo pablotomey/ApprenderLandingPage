@@ -86,6 +86,7 @@ function submitForm(){
 
             }else{
 
+                userMessage.style.display = "block";
                 userMessage.innerHTML = "Error intentalo de nuevo!!";
                 buttonMessage.innerHTML = "Enviar";
 
