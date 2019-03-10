@@ -19,13 +19,13 @@
             "<p>".$mensaje."</p>";
 
 
-    $mail = new PHPMailer(true);                          // Passing `true` enables exceptions
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
     try {
         //Server settings
         $mail->SMTPDebug = 0;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.live.com';                   // Specify main and backup SMTP servers
+        $mail->Host = 'mail.apprenderchile.com';              // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'info@apprenderchile.com';          // SMTP username
         $mail->Password = 'info2019*';                        // SMTP password
@@ -34,7 +34,7 @@
 
         //Recipients
         $mail->setFrom('info@apprenderchile.com', $nombre);
-        $mail->addAddress('pablo.tomey@apprenderchile.com');            // Add a recipient
+        $mail->addAddress('pablo.tomey@apprenderchile.com');  // Add a recipient
         $mail->addCC('monica.alvarez@apprenderchile.com');
         $mail->addCC('galmier.mancilla@apprenderchile.com');
 
