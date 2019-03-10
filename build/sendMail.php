@@ -25,17 +25,18 @@
         //Server settings
         $mail->SMTPDebug = 0;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
+        $mail->Host = 'smtp.office365.com';                   // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'pablo.tp87@gmail.com';             // SMTP username
-        $mail->Password = 'paylamilla';                       // SMTP password
+        $mail->Username = 'info@apprenderchile.com';          // SMTP username
+        $mail->Password = 'info2019*';                        // SMTP password
         $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('pablo.tp87@gmail.com', $nombre);
-        $mail->addAddress('pablo.tp87@gmail.com');            // Add a recipient
-        $mail->addCC('team.apprender@gmail.com');
+        $mail->setFrom('info@apprenderchile.com', $nombre);
+        $mail->addAddress('pablo.tomey@apprenderchile.com');            // Add a recipient
+        $mail->addCC('monica.alvarez@apprenderchile.com');
+        $mail->addCC('galmier.mancilla@apprenderchile.com');
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
