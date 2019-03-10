@@ -25,7 +25,7 @@
         //Server settings
         $mail->SMTPDebug = 0;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.office365.com';                   // Specify main and backup SMTP servers
+        $mail->Host = 'smtp.live.com';                   // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = 'info@apprenderchile.com';          // SMTP username
         $mail->Password = 'info2019*';                        // SMTP password
