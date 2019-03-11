@@ -10,6 +10,11 @@ function showNav() {
 
 // Animaciones realizadas con libreria ScrollReveal.js
 
+
+ScrollReveal({
+    mobile: false   // En los navegadores de dispositivos moviles, se desactiva ScrollReveal!!
+});
+
 ScrollReveal().reveal('.left-anim-description', {
     origin: 'left',
     distance: '100px',
